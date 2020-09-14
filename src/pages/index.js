@@ -50,7 +50,7 @@ render={data => (
                     data-item-price={product.price}
                     data-item-image={product.image.url}
                     data-item-name={product.name}
-                    data-item-url={`/`}
+                    data-item-url={`http://https://mystifying-bose-94b175.netlify.app/`}
                 >Add to cart</button>
               </div>
             </div>

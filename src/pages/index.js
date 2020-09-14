@@ -35,14 +35,7 @@ render={data => (
       {
         data.products.edges.map(({ node: product }) => (
           <div className="Catalogue__item" key={product.id}>
-            <div
-              className="Product snipcart-add-item"
-              data-item-id={product.id}
-              data-item-price={product.price}
-              data-item-image={product.image.url}
-              data-item-name={product.name}
-              data-item-url={`/`}
-            >
+            <div>
               <div className="Product__image">
                 <Img sizes={product.image.sizes} />
               </div> <div className="Product__details">
@@ -52,7 +45,13 @@ render={data => (
                     {product.price}€
                   </div>
                 </div>
-                <span className="Product__buy">Buy now</span>
+                <button className="Product__buy Product snipcart-add-item"
+                    data-item-id={product.id}
+                    data-item-price={product.price}
+                    data-item-image={product.image.url}
+                    data-item-name={product.name}
+                    data-item-url={`/`}
+                >Add to cart</button>
               </div>
             </div>
           </div>
